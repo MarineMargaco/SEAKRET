@@ -1,0 +1,21 @@
+extends layout
+
+mixin message(opp, name)
+  if(opp)
+    h1.greeting Lgged in as
+      span=name
+
+  else
+    h1.greeting Lgged in as
+      span=name
+        to our website
+
+
+append links
+  li(style="float:right;")
+    a(href="/loggout") Loggout
+
+block content
+  .dashbord
+    .user
+      +message(opp,name)

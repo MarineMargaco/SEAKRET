@@ -1,5 +1,6 @@
 var createError = require("http-errors");
 var express = require("express");
+var session = require("express-session");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
@@ -12,6 +13,18 @@ var app = express();
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
+
+// session
+app.use(
+  session({
+    secret: "shhh",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 60 * 1000 * 30
+    }
+  })
+);
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -46,7 +59,7 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
-app.listen(3000, () => {
+app.listen(4000, () => {
   console.log("ca marche sur le port 3000");
 });
 
