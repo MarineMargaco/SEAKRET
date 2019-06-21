@@ -6,3 +6,17 @@ body {
 a {
   color: #00b7ff;
 }
+
+form {
+  height: 500px;
+  width: 440px;
+  border: 1px solid grey;
+  display: inline-flex;
+  padding: 20px;
+  margin: 20px;
+}
+
+img {
+  height: 40px;
+  width: 200px;
+}

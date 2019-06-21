@@ -59,7 +59,8 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
-app.listen(4000, () => {
+// connection au server
+app.listen(3000, () => {
   console.log("ca marche sur le port 3000");
 });
 

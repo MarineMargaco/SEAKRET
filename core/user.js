@@ -8,7 +8,7 @@ User.prototype = {
   find: function(user = null, callback) {
     // if user = number return field = id, if user = string return field =username
     if (user) {
-      var field = Number.isInterger(user) ? "id" : "username";
+      var field = Number.isInteger(user) ? "id" : "username";
     }
     let sql = `SELECT * FROM users WHERE ${field} = ?`;
     pool.query(sql, user, function(err, result) {

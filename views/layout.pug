@@ -2,13 +2,13 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/bootstrap/bootstrap.css') 
+    include includes/styles
+
   body
   .page-wrapper
-  include includes/header
-  include includes/login-form
-  include includes/register-form
+    include includes/header
+    include includes/login-form
+    include includes/register-form
 
 
     block content

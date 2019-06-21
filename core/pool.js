@@ -1,3 +1,5 @@
+"use strict";
+
 const util = require("util");
 const mysql = require("mysql");
 
@@ -6,7 +8,7 @@ const pool = mysql.createPool({
   connectionLimit: 10,
   host: "localhost",
   user: "admin",
-  password: "adminpass",
+  password: "root",
   database: "www"
 });
 
@@ -20,4 +22,5 @@ var getConnection = function(callback) {
 
 pool.query = util.promisify(pool.query);
 
+// module.exports = getConnection;
 module.exports = pool;

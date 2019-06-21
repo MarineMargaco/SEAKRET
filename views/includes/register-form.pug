@@ -1,28 +1,23 @@
-
 form(method="post" action="/register")
 
-
-
-.form-group.row
-  label.col-sm-1.col-form-label(for='inputUsername3') Username
-  .col-sm-4
-    input#inputUsername3.form-control(type='text', placeholder='Username')
-
-.form-group.row
-  label.col-sm-1.col-form-label(for='inputFullname3') Fullname
-  .col-sm-4
-    input#inputFullname3.form-control(type='text', placeholder='Fullname')
-
-.form-group.row
-  label.col-sm-1.col-form-label(for='inputPassword3') Password
-  .col-sm-4
-    input#inputPassword3.form-control(type='password', placeholder='Password')
-
-.form-group.row
-  label.col-sm-1.col-form-label(for='inputConfirm-Password3') Confirm Password
-  .col-sm-4
-    input#inputConfirm-Password3.form-control(type='password', placeholder='Confirm-Password')
-
-.form-group.row
-  .col-sm-1
-    button.btn.btn-primary(type='submit') Sign in
+  table
+    tr
+      td Username
+      td
+        input(type="text" name="username")
+    tr
+      td Fullname
+      td
+        input(type="text" name="fullname")
+    tr
+      td Password
+      td
+        input(type="password" name="password")
+    tr
+      td Confirm Password
+      td
+        input(type="password" name="confirm-password")
+    tr
+      td 
+      td
+        input(type="submit" value="Register")
