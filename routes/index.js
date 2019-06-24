@@ -39,13 +39,14 @@ router.post("/login", function(req, res, next) {
   });
 });
 
-// Post login register
+// Post register data
 router.post("/register", function(req, res, next) {
   let userInput = {
     username: req.body.username,
     fullname: req.body.fullname,
     password: req.body.password
   };
+  console.log(userInput);
 
   user.create(userInput, function(lastId) {
     if (lastId) {
