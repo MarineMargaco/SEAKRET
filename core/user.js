@@ -23,6 +23,7 @@ User.prototype = {
 
     var bind = [body.username, body.fullname, body.password];
 
+    // changing this for in
     // for (prop in body) {
     //   console.log(body);
 
