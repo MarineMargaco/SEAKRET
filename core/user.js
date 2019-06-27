@@ -10,9 +10,9 @@ User.prototype = {
     if (user) {
       var field = Number.isInteger(user) ? "id" : "username";
     }
-    let sql = "SELECT * FROM users WHERE ${field} = ?";
+    let sql = `SELECT * FROM users WHERE ${"" + field + ""} = ?`;
     pool.query(sql, user, function(err, result) {
-      if (err) throw err;
+      if (err) console.log(err);
       callback(result);
     });
   },
@@ -21,14 +21,17 @@ User.prototype = {
     let pwd = body.password;
     body.password = bcrypt.hashSync(pwd, 10);
 
-    var bind = [];
+    var bind = [body.username, body.fullname, body.password];
 
-    for (prop in body) {
-      bind.push({ body });
-    }
+    // for (prop in body) {
+    //   console.log(body);
+
+    //   bind.push(prop);
+    // }
     console.log(bind);
 
-    let sql = "INSERT INTO users(username, fullname, password) VALUES (?)";
+    let sql =
+      "INSERT INTO users(username, fullname, password) VALUES (?, ?, ?)";
 
     pool.query(sql, bind, function(err, lastId) {
       if (err) throw err;
