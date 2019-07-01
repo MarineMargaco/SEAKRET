@@ -43,7 +43,7 @@ User.prototype = {
   login: function(username, password, callback) {
     this.find(username, function(user) {
       if (user) {
-        if (bcrypt.compareSync(password, user.password)) {
+        if (bcrypt.compareSync(password, user[0].password)) {
           callback(user);
           return;
         }

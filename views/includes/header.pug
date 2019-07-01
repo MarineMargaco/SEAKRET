@@ -1,6 +1,14 @@
-
-nav
-  ul
-    block links 
-    li
-      a(href="/") Home
+nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+  a.navbar-brand(href='/') SEAK?RET
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#collapsibleNavbar')
+    span.navbar-toggler-icon
+  #collapsibleNavbar.collapse.navbar-collapse
+    ul.navbar-nav
+      li.nav-item
+        a.nav-link(href='') A propos de SEAK?RET
+      br
+      li.nav-item
+        a.nav-link(href='') Notre Blog/Forum
+      br
+      li.nav-item
+        a.nav-link(href='/register') Se Connecter|Créer un compte

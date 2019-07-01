@@ -1,0 +1,27 @@
+#demo.carousel.slide(data-ride='carousel')
+
+  ul.carousel-indicators
+    li.active(data-target='#demo' data-slide-to='0')
+    li(data-target='#demo' data-slide-to='1')
+    li(data-target='#demo' data-slide-to='2')
+
+  .carousel-inner
+    .carousel-item.active
+      img.img-responsive(src='http://localhost:3000/images/concert.png' alt='Concerts' width='100%' height='100%')
+      .carousel-caption
+        h5 SPECTACLES
+    br
+    .carousel-item
+      img.img-responsive(src='http://localhost:3000/images/restaurant.jpg' alt='Job Dating' width='100%' height='100%')
+      .carousel-caption
+        h5 RESTAURATION
+    br
+    .carousel-item
+      img.img-responsive(src='http://localhost:3000/images/jobdating.jpg' alt='After Work / Restaurants' width='100%' height='100%')
+      .carousel-caption
+        h5 JOB DATING
+
+  a.carousel-control-prev(href='#demo' data-slide='prev')
+    span.carousel-control-prev-icon
+  a.carousel-control-next(href='#demo' data-slide='next')
+    span.carousel-control-next-icon

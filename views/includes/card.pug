@@ -1,0 +1,30 @@
+#demo.carousel.slide(data-ride='carousel')
+  // Indicators
+  ul.carousel-indicators
+    li.active(data-target='#demo' data-slide-to='0')
+    li(data-target='#demo' data-slide-to='1')
+    li(data-target='#demo' data-slide-to='2')
+  .row
+    .col-md-4.col-lg-4.col-xs-12.col-sm-4
+      .card
+        img.card-img-top(src='http://localhost:3000/images/concert2.jpg' alt='Card image cap')
+        .card-body
+          h5.card-title Spectacles
+          p.card-text
+            | Vos artistes preferes en exclusivite avec SEAK?RET. Reservez des maintenant et partager l evenement avec vos proches
+          a.btn.btn-primary(href='/Sdates') Reserver
+    .col-md-4.col-lg-4.col-xs-12.col-sm-4
+      .card
+        img.card-img-top(src='http://localhost:3000/images/restaurant2.jpg' alt='Card image cap')
+        .card-body
+          h5.card-title Evenements Restauration
+          p.card-text
+            | Vous voulez participer aux after party et aux soirees speciales des restaurants ? Regardez les dates des prochains evenements et inviter vos proches
+          a.btn.btn-primary(href='/Rdates') Acceder au calendrier
+    .col-md-4.col-lg-4.col-xs-12.col-sm-4
+      .card
+        img.card-img-top(src='http://localhost:3000/images/jobdating2.jpeg' alt='Card image cap')
+        .card-body
+          h5.card-title Job Datings
+          p.card-text Profitez de ces jobs datings pour rencontrer votre prochain employeur ! 
+          a.btn.btn-primary(href='/JDdates') Acceder au calendrier

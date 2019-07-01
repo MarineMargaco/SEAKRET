@@ -25,14 +25,20 @@ router.get("/home", function(req, res, next) {
   res.redirect("/");
 });
 
+router.get("/register", (req, res) => {
+  res.render("includes/register-form");
+  res.render("includes/login-form");
+});
+
 // Post login data
 router.post("/login", function(req, res, next) {
   user.login(req.body.username, req.body.password, function(result) {
     if (result) {
       req.session.user = result;
       req.session.opp = 1;
+
       res.redirect("/home");
-      // res.send("Logged in as: " + result.username);
+      res.send("Logged in as: " + result.username);
     } else {
       res.send("Invalid password/ username !");
     }
