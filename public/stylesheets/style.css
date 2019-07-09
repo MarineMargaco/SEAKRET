@@ -38,6 +38,11 @@ body {
   height: 450px;
 }
 
+form {
+  padding: 50px;
+  width: 400px;
+  display: inline-flex;
+}
 .page-footer {
   background-color: darkslategrey;
   color: white;

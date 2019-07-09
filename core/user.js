@@ -22,13 +22,6 @@ User.prototype = {
     body.password = bcrypt.hashSync(pwd, 10);
 
     var bind = [body.username, body.fullname, body.password];
-
-    // changing this for in
-    // for (prop in body) {
-    //   console.log(body);
-
-    //   bind.push(prop);
-    // }
     console.log(bind);
 
     let sql =
@@ -53,3 +46,12 @@ User.prototype = {
 };
 
 module.exports = User;
+
+// changing this for in
+// for (prop in body) {
+//   console.log(body);
+
+//   bind.push(prop);
+// }
+
+// [0].
